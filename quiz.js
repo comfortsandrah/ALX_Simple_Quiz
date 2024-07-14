@@ -3,6 +3,7 @@ function checkAnswer() {
     // Function body
     const correctAnswer = "4";
     const userAnswer = document.querySelector('input[name="quiz"]:checked').value;
+    const feedback = document.getElementById('feedback');
     if (userAnswer === correctAnswer) {
         feedback.textContent = "Correct! Well done.";
     }
@@ -11,6 +12,6 @@ function checkAnswer() {
     }
     // Add an Event Listener to the Submit Button:
     const submitButton = document.getElementById('submit-answer');
-    submitButton.addEventListener('click', checkAnswer);    
+    submitButton.addEventListener('click', checkAnswer);
 }
 
